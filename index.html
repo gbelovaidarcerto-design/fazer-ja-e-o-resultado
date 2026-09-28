@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fazer já é o resultado</title>
+<meta name="description" content="Série em quatro volumes de Gullit Belo: a mentoria completa para concursos públicos e provas difíceis. Comece por O essencial do método.">
+<meta property="og:title" content="Fazer já é o resultado · Gullit Belo">
+<meta property="og:description" content="A mentoria completa para concursos públicos e provas difíceis, em quatro volumes. Comece por O essencial do método.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#162436">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Lora:ital@0;1&display=swap">
+<!--
+  LINKS DE COMPRA
+  Cada botão de compra é um <a class="comprar" href="">. Com o href vazio, o botão aparece
+  como "Em breve" e não pode ser clicado. Quando o produto estiver criado na Kiwify, cole o link
+  do checkout (https://pay.kiwify.com.br/...) entre as aspas. Os lugares estão marcados com "KIWIFY".
+-->
+<style>
+:root{
+  color-scheme:light;
+  --papel:#F7F2E8;--superficie:#FFFCF6;--linha:#E1D6C2;
+  --tinta:#18222E;--suave:#5B6570;--noite:#162436;--sobre-noite:#F4EEE3;--areia:#E9DCC4;
+  --v1:#162436;--v2:#18423A;--v3:#682C1A;--v4:#5C4212;--acento:#A94A28;
+  --serif:'Instrument Serif',Georgia,serif;--sans:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--texto:'Lora',Georgia,serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --papel:#0F1823;--superficie:#16212D;--linha:#26333F;--tinta:#EFE8DB;--suave:#A6B0BA;--areia:#1D2935;--acento:#D98A63;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --papel:#0F1823;--superficie:#16212D;--linha:#26333F;--tinta:#EFE8DB;--suave:#A6B0BA;--areia:#1D2935;--acento:#D98A63;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.5}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+p{margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+.w{max-width:560px;margin:0 auto;padding-inline:18px}
+
+/* topo */
+.topo{background:var(--noite);color:var(--sobre-noite);padding-block:34px 30px}
+.topo .w{display:flex;flex-direction:column;gap:18px}
+.autor{display:flex;align-items:center;gap:12px;font-size:14px;color:#C6CFD8}
+.autor b{color:var(--sobre-noite);letter-spacing:.2em;text-transform:uppercase;font-size:12.5px}
+.topo h1{font-family:var(--serif);font-size:clamp(44px,12vw,62px);line-height:.98;letter-spacing:-.01em}
+.topo h1 i{font-style:italic}
+.topo .sub{font-family:var(--texto);font-style:italic;font-size:17px;color:#D9D0C0;max-width:34ch}
+.estante{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:6px}
+.estante img{width:100%;height:auto;aspect-ratio:160/230;border-radius:2px;box-shadow:0 12px 22px -12px rgba(0,0,0,.7)}
+.estante-legenda{font-size:12.5px;color:#9FB0C2;letter-spacing:.04em}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 20px;border-radius:999px;font-weight:700;font-size:15.5px;text-decoration:none;text-align:center}
+.btn:focus-visible{outline:3px solid var(--acento);outline-offset:3px}
+.btn.claro{background:var(--sobre-noite);color:var(--noite)}
+.comprar{background:var(--tinta);color:var(--papel);min-height:42px;font-size:14.5px;padding:9px 16px}
+.comprar[href=""]{pointer-events:none;background:var(--areia);color:var(--suave)}
+.comprar[href=""] span{display:none}
+.comprar[href=""]::after{content:"Em breve"}
+
+/* seções */
+main .w{display:flex;flex-direction:column;gap:38px;padding-block:34px 44px}
+.secao{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--acento)}
+.secao h2{font-family:var(--serif);font-size:32px;line-height:1.05}
+.secao .intro{font-family:var(--texto);color:var(--suave);font-size:16px}
+
+/* essencial */
+.essencial{background:var(--superficie);border:1px solid var(--linha);border-radius:16px;padding:20px;display:grid;grid-template-columns:78px 1fr;gap:16px;align-items:start}
+.essencial img{border-radius:2px;box-shadow:0 10px 18px -12px rgba(20,30,45,.6)}
+.essencial h2{font-size:26px}
+.essencial p{font-family:var(--texto);color:var(--suave);font-size:15px;margin-top:6px}
+.essencial .btn{margin-top:14px;background:var(--acento);color:#fff}
+.essencial .comprar[href=""]{background:var(--areia);color:var(--suave)}
+
+/* volumes */
+.volumes{display:flex;flex-direction:column;gap:12px}
+.vol{display:grid;grid-template-columns:74px 1fr;gap:14px;align-items:center;padding:12px;border-radius:14px;background:var(--superficie);border:1px solid var(--linha);border-left:6px solid var(--cor)}
+.vol img{width:74px;height:auto;border-radius:2px}
+.vol .n{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--suave)}
+.vol h3{font-family:var(--serif);font-size:23px;line-height:1.1;margin-top:2px}
+.vol p{font-size:13.5px;color:var(--suave);margin-top:4px;font-variant-numeric:tabular-nums}
+.vol .comprar{margin-top:10px}
+.v1{--cor:var(--v1)}.v2{--cor:var(--v2)}.v3{--cor:var(--v3)}.v4{--cor:var(--v4)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .vol{border-left-color:color-mix(in srgb,var(--cor) 55%,#fff 45%)}}
+:root[data-theme="dark"] .vol{border-left-color:color-mix(in srgb,var(--cor) 55%,#fff 45%)}
+
+.completa{background:var(--noite);color:var(--sobre-noite);border-radius:16px;padding:20px;display:grid;grid-template-columns:78px 1fr;gap:16px;align-items:center}
+.completa h3{font-family:var(--serif);font-size:26px;line-height:1.05}
+.completa p{font-size:14px;color:#C6CFD8;margin-top:4px}
+.completa .comprar{margin-top:12px;background:var(--sobre-noite);color:var(--noite)}
+.completa .comprar[href=""]{background:rgba(255,255,255,.12);color:#C6CFD8}
+
+.lista-o-que{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;font-size:14.5px;padding:0;margin:0;list-style:none}
+.lista-o-que li{padding-left:14px;position:relative}
+.lista-o-que li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--acento)}
+
+.sobre{font-family:var(--texto);font-size:15.5px;color:var(--suave);display:flex;flex-direction:column;gap:10px}
+.sobre b{font-family:var(--sans);color:var(--tinta)}
+.sobre h2{color:var(--tinta)}
+.mentoria .btn{align-self:flex-start;background:transparent;color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--tinta)}
+footer{border-top:1px solid var(--linha);padding-block:22px 34px;text-align:center;font-size:13px;color:var(--suave)}
+footer .verso{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--tinta);margin-bottom:4px}
+
+@media (max-width:380px){
+  .lista-o-que{grid-template-columns:1fr}
+  .essencial,.completa{grid-template-columns:1fr}
+  .essencial img,.completa img{width:84px}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="w">
+    <p class="autor"><b>Gullit Belo</b> <span>@mentoriagb</span></p>
+    <h1>Fazer já é<br><i>o resultado</i></h1>
+    <p class="sub">A mentoria completa para concursos públicos e provas difíceis, em quatro volumes.</p>
+    <div class="estante" aria-hidden="true">
+      <img src="img/vol1.webp" alt="" width="130" height="187">
+      <img src="img/vol2.webp" alt="" width="130" height="187">
+      <img src="img/vol3.webp" alt="" width="130" height="187">
+      <img src="img/vol4.webp" alt="" width="130" height="187">
+    </div>
+    <p class="estante-legenda">Seis dias de estudo, um de descanso. A cada volume, a volta avança.</p>
+  </div>
+</header>
+
+<main>
+  <div class="w">
+
+    <section class="essencial" aria-labelledby="t-essencial">
+      <img src="img/completa.webp" alt="Capa de Fazer já é o resultado" width="78" height="112">
+      <div>
+        <p class="eyebrow">15 páginas · R$ 19,90</p>
+        <h2 id="t-essencial">O essencial do método</h2>
+        <p>A série resumida no que importa: os 12 princípios, o ciclo que gira, a semana de seis dias e as quatro trilhas.</p>
+        <!-- KIWIFY: O essencial do método -->
+        <a class="btn comprar" href="" target="_blank" rel="noopener"><span>Comprar</span></a>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="t-volumes">
+      <p class="eyebrow">A série</p>
+      <h2 id="t-volumes">Quatro volumes, uma mentoria</h2>
+      <p class="intro">Leia um volume, aplique o que ele pede e siga para o próximo. Cada um vem em PDF e EPUB.</p>
+      <div class="volumes">
+        <article class="vol v1">
+          <img src="img/vol1.webp" alt="Capa do volume 1" width="74" height="106" loading="lazy">
+          <div>
+            <p class="n">Volume 1</p>
+            <h3>Fundamentos</h3>
+            <p>A vida antes da prova, como o cérebro aprende e o seu ponto de partida. 182 páginas.</p>
+            <!-- KIWIFY: Volume 1 -->
+            <a class="btn comprar" href="" target="_blank" rel="noopener"><span>Comprar</span></a>
+          </div>
+        </article>
+        <article class="vol v2">
+          <img src="img/vol2.webp" alt="Capa do volume 2" width="74" height="106" loading="lazy">
+          <div>
+            <p class="n">Volume 2</p>
+            <h3>O método</h3>
+            <p>Edital, ciclo que gira, sessão de estudo, acervo da banca, revisão e inteligência artificial. 273 páginas.</p>
+            <!-- KIWIFY: Volume 2 -->
+            <a class="btn comprar" href="" target="_blank" rel="noopener"><span>Comprar</span></a>
+          </div>
+        </article>
+        <article class="vol v3">
+          <img src="img/vol3.webp" alt="Capa do volume 3" width="74" height="106" loading="lazy">
+          <div>
+            <p class="n">Volume 3</p>
+            <h3>A vida, o corpo e as trilhas</h3>
+            <p>Sono, corpo, saúde mental, constância e o plano para o seu prazo. 266 páginas.</p>
+            <!-- KIWIFY: Volume 3 -->
+            <a class="btn comprar" href="" target="_blank" rel="noopener"><span>Comprar</span></a>
+          </div>
+        </article>
+        <article class="vol v4">
+          <img src="img/vol4.webp" alt="Capa do volume 4" width="74" height="106" loading="lazy">
+          <div>
+            <p class="n">Volume 4</p>
+            <h3>A prova e depois</h3>
+            <p>Reta final, dia da prova, resultado e as ferramentas da mentoria. 218 páginas.</p>
+            <!-- KIWIFY: Volume 4 -->
+            <a class="btn comprar" href="" target="_blank" rel="noopener"><span>Comprar</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="completa">
+        <img src="img/completa.webp" alt="Capa da edição completa" width="78" height="112" loading="lazy">
+        <div>
+          <h3>Série completa</h3>
+          <p>Os quatro volumes e a edição em volume único, em PDF e EPUB.</p>
+          <!-- KIWIFY: Série completa -->
+          <a class="btn comprar" href="" target="_blank" rel="noopener"><span>Comprar</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="t-dentro">
+      <p class="eyebrow">O que você encontra</p>
+      <h2 id="t-dentro">Método, corpo e vida</h2>
+      <ul class="lista-o-que">
+        <li>O ciclo de estudos que gira, sem cronograma rígido</li>
+        <li>Questões como acervo da banca</li>
+        <li>Inteligência artificial com 20 comandos prontos</li>
+        <li>Revisão espaçada e escrita de compreensão</li>
+        <li>Sono, corpo e saúde mental</li>
+        <li>Trilhas para cada prazo, até depois do edital</li>
+        <li>Semana de seis dias, domingo guardado</li>
+        <li>Modelos, checklists e roteiro de 12 semanas</li>
+      </ul>
+    </section>
+
+    <section class="secao sobre" aria-labelledby="t-autor">
+      <p class="eyebrow">Quem escreve</p>
+      <h2 id="t-autor">Gullit Belo</h2>
+      <p>Comecei a estudar para concursos ainda na escola. Na faculdade de Direito, passei na OAB quase um ano antes de me formar e terminei o curso já servidor público, nomeado duas vezes. Ao todo, fui aprovado em quase vinte provas, pela bondade de Deus.</p>
+      <p>Fui ajudado no início e sempre quis passar adiante o que aprendi. Esta série é isso: a mentoria que eu faço, em livro.</p>
+    </section>
+
+    <section class="secao mentoria" aria-labelledby="t-mentoria">
+      <p class="eyebrow">Acompanhamento</p>
+      <h2 id="t-mentoria">Mentoria individual</h2>
+      <p class="intro">Para montar o seu ciclo, a sua trilha e a sua semana com acompanhamento.</p>
+      <a class="btn" href="https://ig.me/m/mentoriagb" target="_blank" rel="noopener">Falar no Instagram</a>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="w">
+    <p class="verso">“O cavalo prepara-se para o dia da batalha, mas a vitória vem do Senhor.”</p>
+    <p>Provérbios 21.31 · <a href="https://www.instagram.com/mentoriagb/" target="_blank" rel="noopener">@mentoriagb</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -37,6 +37,9 @@
 .completa p{margin:0;color:var(--lapis)}
 .completa .preco{color:var(--grafite);font-weight:500;font-size:18px}
 .completa .btn{margin-top:12px}
+.seguro{font-size:14px;color:var(--lapis);margin:10px 0 0;max-width:46ch}
+.abre-preco{margin:18px 0 0;font-weight:500}
+.intro .btn{margin-top:14px}
 .temas{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:0;border-top:1px solid var(--pauta)}
 .temas li{padding:14px 0;border-bottom:1px solid var(--pauta)}
 @media (min-width:900px){
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded',function(){
   q.forEach(function(v,k){if(/^utm_|^src$/.test(k))keep.set(k,v)});
   document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
     var u=new URL(a.href);keep.forEach(function(v,k){u.searchParams.set(k,v)});a.href=u.toString();
-    a.addEventListener('click',function(){fbq('track','InitiateCheckout',{content_name:(a.getAttribute('data-produto')||a.textContent||'').trim().slice(0,60)})});
+    a.addEventListener('click',function(){fbq('trackCustom','CliqueComprar',{content_name:(a.getAttribute('data-produto')||a.textContent||'').trim().slice(0,60)})});
   });
 });
 </script>
@@ -76,17 +79,20 @@ document.addEventListener('DOMContentLoaded',function(){
   <div class="w intro">
     <h1>Fazer já é o resultado</h1>
     <p>A mentoria que eu faço com quem estuda para concurso, escrita em quatro volumes: edital e banca, ciclo de estudos, revisão, sono, trilhas para cada prazo e o dia da prova. Em PDF e EPUB, para ler e aplicar.</p>
+    <p class="abre-preco">Comece pelo guia Essencial do método, <mark>R$ 47</mark>, ou leve a série completa por R$ 147.</p>
+    <a class="btn" href="#t-essencial">Ver por onde começar</a>
   </div>
 
   <section class="w" aria-labelledby="t-essencial">
     <div class="destaque">
-      <img class="capa" src="img/essencial.webp" width="520" height="738" alt="Capa do guia O essencial do método">
+      <img class="capa" src="img/essencial.webp" width="520" height="738" fetchpriority="high" alt="Capa do guia O essencial do método">
       <div>
         <h2 id="t-essencial">Comece pelo Essencial do método</h2>
         <p>O método inteiro em 81 páginas: os 12 princípios, como se aprende, o método em oito passos, a semana de seis dias, a sua trilha e os primeiros sete dias.</p>
         <p class="bonus">Vem com o Kit Comece hoje: planilha, a primeira semana dia a dia, 5 comandos de IA e 2 papéis de parede.</p>
         <a class="btn" data-produto="O essencial do método" href="https://pay.kiwify.com.br/DaNx34t">Comprar por R$ 47</a>
         <span class="depois">Se depois quiser a série completa, o Essencial já vem incluído nela.</span>
+        <p class="seguro">Pagamento pela Kiwify. Garantia de 7 dias: se não for para você, peça o reembolso integral.</p>
       </div>
     </div>
   </section>
@@ -98,7 +104,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
   <ul class="estante quatro" aria-label="Volumes da série">
     <li class="livro" style="--i:0">
-      <div class="cv"><img src="img/vol1.webp" width="520" height="747" alt="Capa do Volume 1, Fundamentos"></div>
+      <div class="cv"><img src="img/vol1.webp" width="520" height="747" loading="lazy" alt="Capa do Volume 1, Fundamentos"></div>
       <h3>Volume 1: Fundamentos</h3>
       <p>A vida antes da prova, como o cérebro aprende e o seu ponto de partida. 187 páginas.</p>
       <p class="bonus">Bônus: modelos editáveis, planilhas, checklists em cartões e Kit Comece hoje.</p>
@@ -106,7 +112,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a class="comprar" data-produto="Volume 1" href="https://pay.kiwify.com.br/bUjN374">Comprar o Volume 1</a>
     </li>
     <li class="livro" style="--i:1">
-      <div class="cv"><img src="img/vol2.webp" width="520" height="747" alt="Capa do Volume 2, O método"></div>
+      <div class="cv"><img src="img/vol2.webp" width="520" height="747" loading="lazy" alt="Capa do Volume 2, O método"></div>
       <h3>Volume 2: O método</h3>
       <p>Edital, ciclo que gira, sessão de estudo, acervo da banca, revisão e inteligência artificial. 283 páginas.</p>
       <p class="bonus">Bônus: os 20 comandos de IA para copiar, 12 modelos editáveis e planilhas com fórmulas prontas.</p>
@@ -114,7 +120,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a class="comprar" data-produto="Volume 2" href="https://pay.kiwify.com.br/tG6VuBu">Comprar o Volume 2</a>
     </li>
     <li class="livro" style="--i:2">
-      <div class="cv"><img src="img/vol3.webp" width="520" height="747" alt="Capa do Volume 3, A vida, o corpo e as trilhas"></div>
+      <div class="cv"><img src="img/vol3.webp" width="520" height="747" loading="lazy" alt="Capa do Volume 3, A vida, o corpo e as trilhas"></div>
       <h3>Volume 3: A vida, o corpo e as trilhas</h3>
       <p>Sono, corpo, saúde mental, constância e o plano para o seu prazo. 277 páginas.</p>
       <p class="bonus">Bônus: diário de sono, plano pessoal de cuidado e checklists em cartões.</p>
@@ -122,7 +128,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a class="comprar" data-produto="Volume 3" href="https://pay.kiwify.com.br/R0eADSO">Comprar o Volume 3</a>
     </li>
     <li class="livro" style="--i:3">
-      <div class="cv"><img src="img/vol4.webp" width="520" height="747" alt="Capa do Volume 4, A prova e depois"></div>
+      <div class="cv"><img src="img/vol4.webp" width="520" height="747" loading="lazy" alt="Capa do Volume 4, A prova e depois"></div>
       <h3>Volume 4: A prova e depois</h3>
       <p>Reta final, dia da prova, resultado e as ferramentas da mentoria. 234 páginas.</p>
       <p class="bonus">Bônus: calendário das 12 semanas, cartões da véspera e da mochila, autópsia de prova.</p>
@@ -137,6 +143,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <p>Os quatro volumes, a edição em volume único e o Essencial do método, em PDF e EPUB, com todos os bônus: 19 modelos editáveis, a planilha da mentoria, 13 checklists, os 20 comandos de IA e o calendário das 12 semanas.</p>
       <p class="preco"><mark>R$ 147</mark> pela série, contra R$ 188 nos quatro volumes avulsos</p>
       <a class="btn" data-produto="Série completa" href="https://pay.kiwify.com.br/gV70Yjg">Comprar a série completa</a>
+      <p class="seguro">Pagamento pela Kiwify. Garantia de 7 dias: se não for para você, peça o reembolso integral.</p>
     </div>
   </section>
 
